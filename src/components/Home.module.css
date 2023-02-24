@@ -1,0 +1,57 @@
+section.homeSection {
+  /* height: 100vh; */
+}
+
+.side {
+  height: 100vh;
+  width: 100%;
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+  display: grid;
+  place-items: center;
+
+  position: absolute;
+  overflow: hidden;
+}
+
+.side .title {
+  /* font-family: "Rubik", sans-serif; */
+  font-size: 3vw;
+  margin: 0px 35vw;
+  width: 30vw;
+}
+
+.side .fancy {
+  font-family: "Lobster", cursive;
+  font-size: 1.3em;
+  line-height: 0.7em;
+}
+
+#leftSide .title {
+  color: white;
+}
+
+#leftSide .fancy {
+  color: yellow;
+}
+
+#rightSide .title {
+  color: black;
+}
+
+#rightSide .fancy {
+  color: white;
+}
+
+
+#leftSide {
+  background-color: royalblue;
+  z-index: 1;
+}
+
+#rightSide {
+  background-color: tomato;
+}
