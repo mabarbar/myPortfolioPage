@@ -1,16 +1,16 @@
 section.storyPageSection {
   height: 100vh;
   width: 100%;
-  background-color: yellow;
+  background-color: black;
   /* margin: 0rem; */
   /* overflow: hidden; */
 }
 
 #imageTrack > .image {
-  width: 40vmin;
-  height: 56vmin;
+  width: 30vmin;
+  height: 50vmin;
   object-fit: cover;
-  object-position: center;
+  object-position: 100% 50%;
 }
 
 #imageTrack {

@@ -25,7 +25,7 @@ section.homeSection {
 }
 
 .side .fancy {
-  font-family: "Lobster", cursive;
+  font-family: "Handlee", cursive;
   font-size: 1.3em;
   line-height: 0.7em;
 }
@@ -35,7 +35,7 @@ section.homeSection {
 }
 
 #leftSide .fancy {
-  color: yellow;
+  color: #ddd;
 }
 
 #rightSide .title {
@@ -43,15 +43,14 @@ section.homeSection {
 }
 
 #rightSide .fancy {
-  color: white;
+  color: #333;
 }
 
-
 #leftSide {
-  background-color: royalblue;
+  background-color: black;
   z-index: 1;
 }
 
 #rightSide {
-  background-color: tomato;
+  background-color: white;
 }
