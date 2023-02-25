@@ -55,15 +55,30 @@ const StoryPage = () => {
       url: "../img/3.webp",
       id: "3",
     },
+    {
+      url: "../img/6.webp",
+      id: "6",
+    },
+    {
+      url: "../img/3.webp",
+      id: "3",
+    },
+    {
+      url: "../img/6.webp",
+      id: "6",
+    },
+    {
+      url: "../img/3.webp",
+      id: "3",
+    },
   ];
-  
+
   return (
     <section className={styles.storyPageSection}>
       <div id={styles.imageTrack} style={{ transform }}>
         {pictures.map((item) => (
           <Image key={item.id} item={item.url} />
-          ))
-        }
+        ))}
       </div>
     </section>
   );
