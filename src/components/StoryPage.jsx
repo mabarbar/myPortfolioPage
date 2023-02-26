@@ -2,6 +2,13 @@ import { useState } from "react";
 import styles from "./StoryPage.module.css";
 import Image from "./Image";
 
+import image1 from "../img/3.webp";
+import image2 from "../img/2.webp";
+import image3 from "../img/3.webp";
+import image4 from "../img/4.webp";
+import image5 from "../img/5.webp";
+import image6 from "../img/6.webp";
+
 const StoryPage = () => {
   const [transform, setTransform] = useState("translate(0%, 30%)");
   const [percentage, setPercentage] = useState("");
@@ -48,28 +55,28 @@ const StoryPage = () => {
 
   const pictures = [
     {
-      url: "../img/6.webp",
-      id: "6",
+      id: "1",
+      url: image1,
     },
     {
-      url: "../img/3.webp",
+      id: "2",
+      url: image2,
+    },
+    {
       id: "3",
+      url: image3,
     },
     {
-      url: "../img/6.webp",
+      id: "4",
+      url: image4,
+    },
+    {
+      id: "5",
+      url: image5,
+    },
+    {
       id: "6",
-    },
-    {
-      url: "../img/3.webp",
-      id: "3",
-    },
-    {
-      url: "../img/6.webp",
-      id: "6",
-    },
-    {
-      url: "../img/3.webp",
-      id: "3",
+      url: image6,
     },
   ];
 
@@ -77,7 +84,7 @@ const StoryPage = () => {
     <section className={styles.storyPageSection}>
       <div id={styles.imageTrack} style={{ transform }}>
         {pictures.map((item) => (
-          <Image key={item.id} item={item.url} />
+          <Image key={item.id} item={item} />
         ))}
       </div>
     </section>
