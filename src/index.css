@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Poppins:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Poppins:wght@700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,6 +8,7 @@
 
 body {
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   margin: 0;
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
