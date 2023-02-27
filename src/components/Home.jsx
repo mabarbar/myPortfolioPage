@@ -1,8 +1,8 @@
 import styles from "./Home.module.css";
 
-const Home = ({ width }) => {
+const Home = ({ width, executeScroll }) => {
   return (
-    <section className={styles.homeSection}>
+    <section className={styles.homeSection} onClick={executeScroll}>
       <div id={styles.leftSide} className={`${styles.side}`} style={{ width }}>
         <h1 className={styles.title}>
           Mateusz Barzenc <span className={styles.fancy}>inz architekt</span>

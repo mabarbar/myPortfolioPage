@@ -1,0 +1,5 @@
+.App {
+  position: relative;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}

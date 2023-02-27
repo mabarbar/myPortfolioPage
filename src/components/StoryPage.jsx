@@ -9,7 +9,7 @@ import image4 from "../img/4.webp";
 import image5 from "../img/5.webp";
 import image6 from "../img/6.webp";
 
-const StoryPage = () => {
+const StoryPage = ({ myRef }) => {
   const [transform, setTransform] = useState("translate(0%, 30%)");
   const [percentage, setPercentage] = useState("");
   const [mouseDownAt, setMouseDownAt] = useState("0");
@@ -81,7 +81,7 @@ const StoryPage = () => {
   ];
 
   return (
-    <section className={styles.storyPageSection}>
+    <section className={styles.storyPageSection} ref={myRef}>
       <div id={styles.imageTrack} style={{ transform }}>
         {pictures.map((item) => (
           <Image key={item.id} item={item} />

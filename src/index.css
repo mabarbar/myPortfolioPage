@@ -6,9 +6,11 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
   margin: 0;
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
