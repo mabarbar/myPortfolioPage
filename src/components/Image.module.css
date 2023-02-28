@@ -3,5 +3,10 @@
   height: 50vmin;
   object-fit: cover;
   object-position: 100% 50%;
-  
+  transition: transform .5s ease;
+}
+
+.image:hover {
+  filter: brightness(0.9);
+  transform: scale(0.98);
 }

@@ -38,6 +38,7 @@ function App() {
         <StoryPage
           executeScroll={executeScroll}
           goToSectionRef={coolSectionRef}
+          goToPrevSectionRef={homeRef}
         />
       </div>
       <div ref={coolSectionRef}>

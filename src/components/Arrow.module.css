@@ -1,0 +1,27 @@
+.arrow {
+  position: absolute;
+  text-align: center;
+  top: 90%;
+  width: 5%;
+  height: 4rem;
+  font-size: 2.5rem;
+  color: #333;
+  z-index: 100;
+  transition: transform .2s ease;
+}
+
+.arrow:hover {
+  color: #999;
+  filter: brightness(0.9);
+  transform: scale(0.85);
+}
+
+.image {
+  width: 30vmin;
+  height: 50vmin;
+  object-fit: cover;
+  object-position: 100% 50%;
+}
+
+.image:hover {
+}

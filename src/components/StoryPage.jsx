@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styles from "./StoryPage.module.css";
 import Image from "./Image";
+import Arrow from "./Arrow";
 
 import image2 from "../img/2.webp";
 import image3 from "../img/3.webp";
@@ -8,11 +9,13 @@ import image4 from "../img/4.webp";
 import image5 from "../img/5.webp";
 import image6 from "../img/6.webp";
 
-const StoryPage = ({ executeScroll, goToSectionRef }) => {
+const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
   const [transform, setTransform] = useState("translate(-50%, 30%)");
   const [percentage, setPercentage] = useState("");
   const [mouseDownAt, setMouseDownAt] = useState("0");
   const [prevPercentage, setPrevPercentage] = useState("-50");
+
+  const [text, setText] = useState("Nowonarodzony");
 
   window.onmousedown = (e) => {
     setMouseDownAt(e.clientX);
@@ -76,22 +79,51 @@ const StoryPage = ({ executeScroll, goToSectionRef }) => {
     },
   ];
 
+  const changePargraphText = (id) => {
+    switch (`${id}`) {
+      case "1":
+        setText("Nowonarodzony");
+        break;
+      case "2":
+        setText("Podstawówka balti");
+        break;
+      case "3":
+        setText("Liceum");
+        break;
+      case "4":
+        setText("Rok temu pierwsze kroki w frontendzie");
+        break;
+      case "5":
+        setText("Teraz");
+        break;
+    }
+  };
+
   return (
     <section className={styles.storyPageSection}>
+      <Arrow
+        executeScroll={executeScroll}
+        goToSectionRef={goToPrevSectionRef}
+        top={"105%"}
+        rotate={"180deg"}
+      />
       <div id={styles.imageTrack} style={{ transform }}>
         {pictures.map((item) => (
-          <Image key={item.id} item={item} percentage={percentage} />
+          <Image
+            key={item.id}
+            id={item.id}
+            item={item}
+            percentage={percentage}
+            changePargraphText={changePargraphText}
+          />
         ))}
       </div>
-      <p
-        className={styles.storyParagraph}
-        onClick={(e) => {
-          e.stopPropagation();
-          executeScroll(goToSectionRef);
-        }}
-      >
-        Tutaj byłem mały
-      </p>
+      <p className={styles.storyParagraph}>{text}</p>
+      <Arrow
+        executeScroll={executeScroll}
+        goToSectionRef={goToSectionRef}
+        top={"190%"}
+      />
     </section>
   );
 };

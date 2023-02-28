@@ -35,7 +35,7 @@ section.homeSection {
 }
 
 #leftSide .fancy {
-  color: #ddd;
+  color: #333;
 }
 
 #rightSide .title {
@@ -43,14 +43,36 @@ section.homeSection {
 }
 
 #rightSide .fancy {
-  color: #333;
+  color: #666;
 }
 
 #leftSide {
-  background-color: #90C796;
+  background-color: #90c796;
+  background-color: black;
   z-index: 1;
 }
 
 #rightSide {
   background-color: white;
+}
+
+.arrow {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 90%;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2.5rem;
+  color: #333;
+  z-index: 100;
+  border-radius: 2rem;
+  border: 3px solid #333;
+}
+
+.arrowContainer {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
 }
