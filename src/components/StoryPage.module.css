@@ -1,15 +1,10 @@
 section.storyPageSection {
+  display: flex;
+  justify-content: center;
   height: 100vh;
   width: 100%;
-  background-color: #F8EDDC;
-  background-color: #333;
-}
-
-#imageTrack > .image {
-  width: 30vmin;
-  height: 50vmin;
-  object-fit: cover;
-  object-position: 100% 50%;
+  background-color: #f8eddc;
+  background-color: black;
 }
 
 #imageTrack {
@@ -18,5 +13,15 @@ section.storyPageSection {
   position: absolute;
   left: 50%;
   /* top: 50%; */
-  transform: translate(0%, 30%);
+  transform: translate(-50%, 30%);
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  top: 180%;
+  color: #f8eddc;
+  font-size: 1.2rem;
 }

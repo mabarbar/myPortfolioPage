@@ -9,11 +9,11 @@ import image4 from "../img/4.webp";
 import image5 from "../img/5.webp";
 import image6 from "../img/6.webp";
 
-const StoryPage = ({ myRef }) => {
-  const [transform, setTransform] = useState("translate(0%, 30%)");
+const StoryPage = ({ executeScroll, goToSectionRef }) => {
+  const [transform, setTransform] = useState("translate(-50%, 30%)");
   const [percentage, setPercentage] = useState("");
   const [mouseDownAt, setMouseDownAt] = useState("0");
-  const [prevPercentage, setPrevPercentage] = useState("0");
+  const [prevPercentage, setPrevPercentage] = useState("-50");
 
   window.onmousedown = (e) => {
     setMouseDownAt(e.clientX);
@@ -31,8 +31,6 @@ const StoryPage = ({ myRef }) => {
     const maxDelta = window.innerWidth / 2;
 
     const percentage = (mouseDelta / maxDelta) * -100;
-    // Math.min(nextPercentage, 0);
-    // Math.max(nextPercentage, -100);
     const nextPercentageUnconstrained = parseFloat(prevPercentage) + percentage;
     const nextPercentage = Math.max(
       Math.min(nextPercentageUnconstrained, 0),
@@ -43,50 +41,58 @@ const StoryPage = ({ myRef }) => {
 
     setTransform(`translate(${nextPercentage}%, 30%)`);
 
-    // for (const image of track.getElementsByClassName("image")) {
-    //   image.animate(
-    //     {
-    //       objectPosition: `${100 + nextPercentage}% center`,
-    //     },
-    //     { duration: 1200, fill: "forwards" }
-    //   );
-    // }
+    // let picSlide = pictures.map((item) => item);
+    // console.log(picSlide);
+
+    for (const image of pictures) {
+      image.objectPosition = `${100 + nextPercentage}% center`;
+    }
   };
 
   const pictures = [
     {
       id: "1",
-      url: image1,
+      url: image6,
+      objectPosition: "100% 50%",
     },
     {
       id: "2",
       url: image2,
+      objectPosition: "100% 50%",
     },
     {
       id: "3",
       url: image3,
+      objectPosition: "100% 50%",
     },
     {
       id: "4",
       url: image4,
+      objectPosition: "100% 50%",
     },
     {
       id: "5",
       url: image5,
-    },
-    {
-      id: "6",
-      url: image6,
+      objectPosition: "100% 50%",
     },
   ];
 
   return (
-    <section className={styles.storyPageSection} ref={myRef}>
+    <section className={styles.storyPageSection}>
       <div id={styles.imageTrack} style={{ transform }}>
         {pictures.map((item) => (
-          <Image key={item.id} item={item} />
+          <Image key={item.id} item={item} percentage={percentage} />
         ))}
       </div>
+      <p
+        className={styles.storyParagraph}
+        onClick={(e) => {
+          e.stopPropagation();
+          executeScroll(goToSectionRef);
+        }}
+      >
+        Tutaj byłem mały
+      </p>
     </section>
   );
 };

@@ -1,9 +1,11 @@
-import React from 'react'
+import styles from "./CoolSection.module.css";
 
-const CoolSection = () => {
+const CoolSection = ({ executeScroll }) => {
   return (
-    <div>CoolSection</div>
-  )
-}
+    <section className={styles.coolSection} onClick={() => executeScroll()}>
+      CoolSection
+    </section>
+  );
+};
 
-export default CoolSection
+export default CoolSection;
