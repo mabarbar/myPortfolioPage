@@ -2,7 +2,6 @@ import { useState } from "react";
 import styles from "./StoryPage.module.css";
 import Image from "./Image";
 
-import image1 from "../img/3.webp";
 import image2 from "../img/2.webp";
 import image3 from "../img/3.webp";
 import image4 from "../img/4.webp";

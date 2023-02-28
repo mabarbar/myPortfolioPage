@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import Home from "./components/Home";
 import StoryPage from "./components/StoryPage";
 import CoolSection from "./components/CoolSection";
-import styles from "./App.css";
+import "./App.css";
 // import ContactPage from "./components/ContactPage";
 
 function App() {
