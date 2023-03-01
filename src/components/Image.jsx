@@ -7,7 +7,7 @@ const Image = ({ item, percentage, id, changePargraphText }) => {
 
   useEffect(() => {
     setObjectPosition(`${100 + percentage}% center`);
-  });
+  }, [percentage]);
 
   return (
     <img

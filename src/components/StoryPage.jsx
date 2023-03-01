@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import styles from "./StoryPage.module.css";
 import Image from "./Image";
 import Arrow from "./Arrow";
@@ -99,6 +99,9 @@ const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
         break;
       case "5":
         setText("Teraz");
+        break;
+      default:
+        setText("Nowonarodzony");
         break;
     }
   };
