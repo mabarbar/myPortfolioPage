@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./StoryPage.module.css";
 import Image from "./Image";
 import Arrow from "./Arrow";
+import HeaderStory from "./HeaderStory";
 
 import image2 from "../img/2.webp";
 import image3 from "../img/3.webp";
@@ -43,7 +44,7 @@ const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
     setPercentage(nextPercentage);
 
     setTransform(`translate(${nextPercentage}%, 30%)`);
-    setOpacity(`${1 + nextPercentage / 100}`);
+    setOpacity(`${1 + (nextPercentage * 2) / 100}`);
 
     // let picSlide = pictures.map((item) => item);
     // console.log(picSlide);
@@ -84,25 +85,32 @@ const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
   const changePargraphText = (id) => {
     switch (`${id}`) {
       case "1":
-        setText("Nowonarodzony");
+        setText("Zmieniający się tekst po kliknięciu w obrazek: Nowonarodzony");
         break;
       case "2":
-        setText("Podstawówka balti");
+        setText(
+          "Zmieniający się tekst po kliknięciu w obrazek: Podstawówka balti"
+        );
         break;
       case "3":
-        setText("Liceum");
+        setText("Zmieniający się tekst po kliknięciu w obrazek: Liceum");
         break;
       case "4":
-        setText("Rok temu pierwsze kroki w frontendzie");
+        setText(
+          "Zmieniający się tekst po kliknięciu w obrazek: Rok temu pierwsze kroki w frontendzie"
+        );
         break;
       case "5":
-        setText("Teraz");
+        setText("Zmieniający się tekst po kliknięciu w obrazek: Teraz");
         break;
       default:
-        setText("Nowonarodzony");
+        setText("Zmieniający się tekst po kliknięciu w obrazek: Nowonarodzony");
         break;
     }
   };
+
+  const paragraphText =
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam numquam sed sint id blanditiis ea ut, unde eligendi laborum veritatis maxime. Error iste recusandae similique voluptas eveniet velit natus totam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam numquam sed sint id blanditiis ea ut, unde eligendi laborum veritatis maxime. Error iste recusandae similique .";
 
   return (
     <section className={styles.storyPageSection}>
@@ -112,19 +120,8 @@ const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
         top={"105%"}
         rotate={"180deg"}
       />
-      <div className={styles.headerTrack}>
-        <h2 style={{ transform, opacity }}>Krotka historia</h2>
-        <p style={{ transform, opacity }}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis
-          itaque modi explicabo temporibus, et recusandae, maxime, libero ipsam
-          dignissimos esse tenetur quam pariatur optio. Eum, ullam vel. Sint,
-          provident nulla? Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Corporis itaque modi explicabo temporibus, et recusandae,
-          maxime, libero ipsam dignissimos esse tenetur quam pariatur optio.
-          Eum, ullam vel. Sint, provident nulla?
-        </p>
-      </div>
       <div id={styles.imageTrack} style={{ transform }}>
+        <HeaderStory opacity={opacity} paragraphText={paragraphText} />
         {pictures.map((item) => (
           <Image
             key={item.id}
@@ -134,6 +131,11 @@ const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
             changePargraphText={changePargraphText}
           />
         ))}
+        <HeaderStory
+          opacity={-opacity}
+          left={"110%"}
+          paragraphText={paragraphText}
+        />
       </div>
       <p className={styles.storyParagraph}>{text}</p>
       <Arrow

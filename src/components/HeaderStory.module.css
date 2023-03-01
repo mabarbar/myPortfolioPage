@@ -1,0 +1,16 @@
+.headerTrack {
+  position: absolute;
+  left: -50%;
+  color: white;
+  width: 600px;
+  height: 600px;
+  z-index: 1;
+}
+
+.headerTrack > h2 {
+  font-size: 7rem;
+}
+
+.headerTrack > p {
+  height: 20vmin;
+}

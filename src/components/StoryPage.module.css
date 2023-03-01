@@ -9,20 +9,11 @@ section.storyPageSection {
 
 .headerTrack {
   position: absolute;
-  left: 5%;
-  /* top: 110%; */
+  left: -50%;
   color: white;
   width: 600px;
   height: 600px;
   z-index: 1;
-}
-
-.headerTrack > h2 {
-  font-size: 7rem;
-}
-
-.headerTrack > p {
-  height: 40vmin;
 }
 
 #imageTrack {
@@ -34,12 +25,14 @@ section.storyPageSection {
   transform: translate(-50%, 30%);
 }
 
-.storyParagraph {
+p.storyParagraph {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   position: absolute;
   top: 180%;
+  width: 80vmin;
+  text-align: center;
   color: #f8eddc;
   font-size: 1.2rem;
 }
