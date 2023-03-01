@@ -11,7 +11,6 @@ import image6 from "../img/6.webp";
 
 const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
   const [transform, setTransform] = useState("translate(0%, 30%)");
-  const [transformText, setTransformText] = useState("translate(0%, 0%)");
   const [opacity, setOpacity] = useState("1");
   const [percentage, setPercentage] = useState("");
   const [mouseDownAt, setMouseDownAt] = useState("0");
@@ -44,8 +43,7 @@ const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
     setPercentage(nextPercentage);
 
     setTransform(`translate(${nextPercentage}%, 30%)`);
-    setTransformText(`translate(${nextPercentage}%, 0%)`);
-    setOpacity(`${1+nextPercentage/100}`)
+    setOpacity(`${1 + nextPercentage / 100}`);
 
     // let picSlide = pictures.map((item) => item);
     // console.log(picSlide);
@@ -115,8 +113,8 @@ const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
         rotate={"180deg"}
       />
       <div className={styles.headerTrack}>
-        <h2 style={{transform, opacity}}>Krotka historia</h2>
-        <p style={{transform, opacity}}>
+        <h2 style={{ transform, opacity }}>Krotka historia</h2>
+        <p style={{ transform, opacity }}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis
           itaque modi explicabo temporibus, et recusandae, maxime, libero ipsam
           dignissimos esse tenetur quam pariatur optio. Eum, ullam vel. Sint,
