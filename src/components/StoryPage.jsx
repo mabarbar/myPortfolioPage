@@ -10,10 +10,10 @@ import image5 from "../img/5.webp";
 import image6 from "../img/6.webp";
 
 const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
-  const [transform, setTransform] = useState("translate(-50%, 30%)");
+  const [transform, setTransform] = useState("translate(0%, 30%)");
   const [percentage, setPercentage] = useState("");
   const [mouseDownAt, setMouseDownAt] = useState("0");
-  const [prevPercentage, setPrevPercentage] = useState("-50");
+  const [prevPercentage, setPrevPercentage] = useState("0");
 
   const [text, setText] = useState("Nowonarodzony");
 
@@ -45,6 +45,10 @@ const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
 
     // let picSlide = pictures.map((item) => item);
     // console.log(picSlide);
+
+    for (const image of pictures) {
+      image.objectPosition = `${100 + nextPercentage}% center`;
+    }
 
     for (const image of pictures) {
       image.objectPosition = `${100 + nextPercentage}% center`;

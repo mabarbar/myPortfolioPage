@@ -2,8 +2,8 @@
   width: 30vmin;
   height: 50vmin;
   object-fit: cover;
-  object-position: 100% 50%;
-  transition: transform .5s ease;
+  object-position: center center;
+  transition: transform 0.5s ease;
 }
 
 .image:hover {
