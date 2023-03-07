@@ -4,11 +4,11 @@ import Image from "./Image";
 import Arrow from "./Arrow";
 import HeaderStory from "./HeaderStory";
 
+import image1 from "../img/1.webp";
 import image2 from "../img/2.webp";
 import image3 from "../img/3.webp";
 import image4 from "../img/4.webp";
 import image5 from "../img/5.webp";
-import image6 from "../img/6.webp";
 
 const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
   const [transform, setTransform] = useState("translate(0%, 30%)");
@@ -57,7 +57,7 @@ const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
   const pictures = [
     {
       id: "1",
-      url: image6,
+      url: image1,
       objectPosition: "100% 50%",
     },
     {

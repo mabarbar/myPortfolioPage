@@ -1,3 +1,14 @@
 section.coolSection {
+  display: flex;
+  justify-content: center;
   height: 100vh;
+  background-color: #111;
+  color: white;
+}
+
+#tiles {
+  display: inline-block;
+  height: 5%;
+  width: 5%;
+  border: 1px solid white;
 }

@@ -42,7 +42,11 @@ function App() {
         />
       </div>
       <div ref={coolSectionRef}>
-        <CoolSection executeScroll={executeScroll} />
+        <CoolSection
+          executeScroll={executeScroll}
+          goToSectionRef={homeRef}
+          goToPrevSectionRef={storyPageRef}
+        />
       </div>
       {/* <ContactPage /> */}
     </div>

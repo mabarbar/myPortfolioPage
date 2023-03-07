@@ -1,9 +1,22 @@
 import styles from "./CoolSection.module.css";
 
-const CoolSection = ({ executeScroll }) => {
+import Arrow from "./Arrow";
+
+const CoolSection = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
   return (
     <section className={styles.coolSection} onClick={() => executeScroll()}>
-      CoolSection
+      <Arrow
+        executeScroll={executeScroll}
+        goToSectionRef={goToPrevSectionRef}
+        top={"205%"}
+        rotate={"180deg"}
+      />
+      <div id={styles.tiles}></div>
+      <Arrow
+        executeScroll={executeScroll}
+        goToSectionRef={goToSectionRef}
+        top={"290%"}
+      />
     </section>
   );
 };

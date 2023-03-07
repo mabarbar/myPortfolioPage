@@ -19,15 +19,15 @@ section.homeSection {
 
 .side .title {
   /* font-family: "Rubik", sans-serif; */
-  font-size: 3vw;
-  margin: 0px 35vw;
-  width: 30vw;
+  font-size: 5rem;
+  margin: 0px 30vw;
+  width: 40vw;
 }
 
 .side .fancy {
+  display: block;
   font-family: "Handlee", cursive;
   font-size: 1.3em;
-  line-height: 0.7em;
 }
 
 #leftSide .title {
