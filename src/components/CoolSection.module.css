@@ -12,9 +12,9 @@ section.coolSection {
   grid-template-rows: repeat(10, 1fr);
   height: 5%;
   width: 5%;
-  border: 1px solid white;
 }
 
 .tile {
   outline: 1px white solid;
+  color: red;
 }
