@@ -6,15 +6,9 @@ import "./App.css";
 // import ContactPage from "./components/ContactPage";
 
 function App() {
-  const [width, setWidth] = useState("");
-
   const homeRef = useRef();
   const storyPageRef = useRef();
   const coolSectionRef = useRef();
-
-  const handleOnMove = (e) => {
-    setWidth(`${(e.clientX / window.innerWidth) * 100}%`);
-  };
 
   const executeScroll = (ref) =>
     ref.current.scrollIntoView({
@@ -22,17 +16,9 @@ function App() {
     });
 
   return (
-    <div
-      className="App"
-      onMouseMove={(e) => handleOnMove(e)}
-      onTouchMove={(e) => handleOnMove(e.touches[0])}
-    >
+    <div className="App">
       <div ref={homeRef}>
-        <Home
-          width={width}
-          executeScroll={executeScroll}
-          goToSectionRef={storyPageRef}
-        />
+        <Home executeScroll={executeScroll} goToSectionRef={storyPageRef} />
       </div>
       <div ref={storyPageRef}>
         <StoryPage

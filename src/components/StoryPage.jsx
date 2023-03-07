@@ -16,19 +16,9 @@ const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
   const [percentage, setPercentage] = useState("");
   const [mouseDownAt, setMouseDownAt] = useState("0");
   const [prevPercentage, setPrevPercentage] = useState("0");
-
   const [text, setText] = useState("Nowonarodzony");
 
-  window.onmousedown = (e) => {
-    setMouseDownAt(e.clientX);
-  };
-
-  window.onmouseup = () => {
-    setMouseDownAt("0");
-    setPrevPercentage(percentage);
-  };
-
-  window.onmousemove = (e) => {
+  const animateSlider = (e) => {
     if (mouseDownAt === "0") return;
 
     const mouseDelta = parseFloat(mouseDownAt) - e.clientX;
@@ -113,7 +103,17 @@ const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam numquam sed sint id blanditiis ea ut, unde eligendi laborum veritatis maxime. Error iste recusandae similique voluptas eveniet velit natus totam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam numquam sed sint id blanditiis ea ut, unde eligendi laborum veritatis maxime. Error iste recusandae similique .";
 
   return (
-    <section className={styles.storyPageSection}>
+    <section
+      className={styles.storyPageSection}
+      onMouseDown={(e) => {
+        setMouseDownAt(e.clientX);
+      }}
+      onMouseUp={() => {
+        setMouseDownAt("0");
+        setPrevPercentage(percentage);
+      }}
+      onMouseMove={animateSlider}
+    >
       <Arrow
         executeScroll={executeScroll}
         goToSectionRef={goToPrevSectionRef}

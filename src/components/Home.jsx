@@ -1,10 +1,21 @@
 import styles from "./Home.module.css";
 import Arrow from "./Arrow";
+import { useState } from "react";
 
-const Home = ({ width, executeScroll, goToSectionRef }) => {
+const Home = ({ executeScroll, goToSectionRef }) => {
+  const [width, setWidth] = useState("");
+
+  const handleOnMove = (e) => {
+    setWidth(`${(e.clientX / window.innerWidth) * 100}%`);
+  };
+
   return (
     <>
-      <section className={styles.homeSection}>
+      <section
+        className={styles.homeSection}
+        onMouseMove={handleOnMove}
+        onTouchMove={(e) => handleOnMove(e.touches[0])}
+      >
         <div
           id={styles.leftSide}
           className={`${styles.side}`}
