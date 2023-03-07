@@ -8,13 +8,8 @@ section.coolSection {
 
 #tiles {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(25, 1fr);
+  grid-template-rows: repeat(20, 1fr);
   height: 5%;
   width: 5%;
-}
-
-.tile {
-  outline: 1px white solid;
-  color: red;
 }
