@@ -15,27 +15,36 @@ function App() {
       behavior: "smooth",
     });
 
+  const [transform, setTransform] = useState("");
+
+  const cursorFunction = (e) => {
+    setTransform(`translate3d(${e.clientX}px, ${e.clientY}px, 0)`);
+  };
+
   return (
-    <div className="App">
-      <div ref={homeRef}>
-        <Home executeScroll={executeScroll} goToSectionRef={storyPageRef} />
+    <>
+      <div className="cursor" style={{ transform }}></div>
+      <div className="App" onMouseMove={cursorFunction}>
+        <div ref={homeRef}>
+          <Home executeScroll={executeScroll} goToSectionRef={storyPageRef} />
+        </div>
+        <div ref={storyPageRef}>
+          <StoryPage
+            executeScroll={executeScroll}
+            goToSectionRef={coolSectionRef}
+            goToPrevSectionRef={homeRef}
+          />
+        </div>
+        <div ref={coolSectionRef}>
+          <CoolSection
+            executeScroll={executeScroll}
+            goToSectionRef={homeRef}
+            goToPrevSectionRef={storyPageRef}
+          />
+        </div>
+        {/* <ContactPage /> */}
       </div>
-      <div ref={storyPageRef}>
-        <StoryPage
-          executeScroll={executeScroll}
-          goToSectionRef={coolSectionRef}
-          goToPrevSectionRef={homeRef}
-        />
-      </div>
-      <div ref={coolSectionRef}>
-        <CoolSection
-          executeScroll={executeScroll}
-          goToSectionRef={homeRef}
-          goToPrevSectionRef={storyPageRef}
-        />
-      </div>
-      {/* <ContactPage /> */}
-    </div>
+    </>
   );
 }
 
