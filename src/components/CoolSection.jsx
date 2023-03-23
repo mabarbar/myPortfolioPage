@@ -4,9 +4,9 @@ import CoolTile from "./CoolTile";
 import { useState } from "react";
 
 const CoolSection = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
-  const createTiles = (quantity) => {
-    Array.from({ length: columnsNumber * rowsNumber }, (v, k) => k);
-  };
+  // const createTiles = (quantity) => {
+  //   Array.from({ length: columnsNumber * rowsNumber }, (v, k) => k);
+  // };
 
   const [columnsNumber, setColumnsNumber] = useState(
     Math.floor(document.body.clientWidth / 100)
