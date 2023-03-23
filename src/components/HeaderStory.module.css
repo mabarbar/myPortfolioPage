@@ -5,6 +5,7 @@
   width: 600px;
   height: 600px;
   z-index: 1;
+  font-size: 1.5rem;
 }
 
 .headerTrack > h2 {

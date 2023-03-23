@@ -16,13 +16,31 @@ section {
 }
 
 .cursor {
-  top: 0;
-  left: 0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  pointer-events: none;
+  top: -16px;
+  left: -6px;
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   background-color: hsla(0, 0%, 20%, 50%);
-  outline: 2px solid #bbb;
+  outline: 1px solid #ccc;
   border-radius: 2rem;
   z-index: 100;
+  transition: 0.1s;
+}
+
+.cursorChild {
+  pointer-events: none;
+  left: 12px;
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+  background-color: hsla(0, 0%, 100%, 0.9);
+  border-radius: 1rem;
+  z-index: 100;
+  transition: .05s;
 }

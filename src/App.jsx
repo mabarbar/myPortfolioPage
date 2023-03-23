@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import Home from "./components/Home";
-import StoryPage from "./components/StoryPage";
+import StoryPage from "./components/StorySection";
 import CoolSection from "./components/CoolSection";
 import "./App.css";
 // import ContactPage from "./components/ContactPage";
@@ -15,15 +15,19 @@ function App() {
       behavior: "smooth",
     });
 
-  const [transform, setTransform] = useState("");
+  const [cursorTransform, setCursorTransform] = useState("");
 
   const cursorFunction = (e) => {
-    setTransform(`translate3d(${e.clientX}px, ${e.clientY}px, 0)`);
+    setCursorTransform(`translate(${e.clientX - 15}px, ${e.clientY}px)`);
   };
 
   return (
     <>
-      <div className="cursor" style={{ transform }}></div>
+      <div className="cursor" style={{ transform: `${cursorTransform}` }}></div>
+      <div
+        className="cursorChild"
+        style={{ transform: `${cursorTransform}` }}
+      ></div>
       <div className="App" onMouseMove={cursorFunction}>
         <div ref={homeRef}>
           <Home executeScroll={executeScroll} goToSectionRef={storyPageRef} />
