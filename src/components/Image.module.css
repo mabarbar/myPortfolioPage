@@ -4,6 +4,7 @@
   object-fit: cover;
   object-position: center center;
   transition: transform 0.5s ease;
+  box-shadow: 2em 1em hsl(48, 80%, 62%);
 }
 
 .image:hover {
