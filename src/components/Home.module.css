@@ -34,26 +34,34 @@ section.homeSection {
   color: white;
 }
 
-#leftSide .fancy {
-  color: #333;
+#rightSide .title {
+  color: white;
 }
 
-#rightSide .title {
-  color: black;
+#leftSide .ordinary {
+  text-shadow: 5px 5px hsl(209, 43%, 53%);
+}
+
+#rightSide .ordinary {
+  text-shadow: 5px 5px hsl(149, 67%, 68%);
+}
+
+#leftSide .fancy {
+  color: hsl(223, 53%, 16%);
 }
 
 #rightSide .fancy {
-  color: #666;
+  color: hsl(223, 53%, 16%);
 }
 
 #leftSide {
-  background-color: #90c796;
-  background-color: black;
+  background-color: hsl(149, 67%, 68%);
+  /* background-color: black; */
   z-index: 1;
 }
 
 #rightSide {
-  background-color: white;
+  background-color: hsl(210, 63%, 57%);
 }
 
 .arrow {

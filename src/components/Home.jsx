@@ -22,12 +22,14 @@ const Home = ({ executeScroll, goToSectionRef }) => {
           style={{ width }}
         >
           <h1 className={styles.title}>
-            Mateusz Barzenc <span className={styles.fancy}>inz architekt</span>
+            <span className={styles.ordinary}>Mateusz Barzenc</span>{" "}
+            <span className={styles.fancy}>inz architekt</span>
           </h1>
         </div>
         <div id={styles.rightSide} className={styles.side}>
           <h1 className={styles.title}>
-            Mateusz Barzenc <span className={styles.fancy}>frontend dev</span>
+            <span className={styles.ordinary}>Mateusz Barzenc</span>{" "}
+            <span className={styles.fancy}>frontend dev</span>
           </h1>
         </div>
         <div className={styles.arrowContainer}>

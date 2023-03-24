@@ -5,13 +5,29 @@
   width: 600px;
   height: 600px;
   z-index: 1;
-  font-size: 1.5rem;
 }
 
 .headerTrack > h2 {
   font-size: 7rem;
+  text-shadow: 10px 5px hsl(209, 43%, 53%);
+  animation-duration: 3s;
+  /* animation-iteration-count: infinite; */
+  animation-name: one;
+}
+
+.headerTrack > h2:hover {
+  font-size: 7rem;
+  text-shadow: 10px 5px hsl(209, 43%, 53%);
+  animation-duration: .7s;
+  animation-iteration-count: infinite;
+  animation-name: one;
+}
+
+@keyframes one {
+  50%{transform: scale(1.05) translateY(-1%) rotate3d(0, 0, 0, -0.2turn);}
 }
 
 .headerTrack > p {
   height: 20vmin;
+  font-size: 1.5rem;
 }

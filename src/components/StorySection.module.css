@@ -3,8 +3,7 @@ section.storyPageSection {
   justify-content: center;
   height: 100vh;
   width: 100%;
-  background-color: #f8eddc;
-  background-color: black;
+  background-color: hsl(248, 67%, 51%);
 }
 
 .headerTrack {
@@ -35,4 +34,5 @@ p.storyParagraph {
   text-align: center;
   color: #f8eddc;
   font-size: 1.2rem;
+  transition: 1s ease-in-out;
 }

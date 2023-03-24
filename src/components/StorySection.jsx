@@ -101,9 +101,6 @@ const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
     }
   };
 
-  const paragraphText =
-    "Samouk Front-end Developer z pasją do nauki nowych umiejętności i technologii. Absolwent Architektury, obecnie student Informatyki na Politechnice Lubelskiej. Projektowaniem stron internetowych i web developmentem zacząłem interesować się w 2020 roku. Z pomocą kreatywności, staram się tworzyć nowoczesne aplikacje, które oferują doświadczenia zorientowane ku użytkownikowi.";
-
   return (
     <section
       className={styles.storyPageSection}
@@ -124,7 +121,7 @@ const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
         rotate={"180deg"}
       />
       <div id={styles.imageTrack} style={{ transform }}>
-        <HeaderStory opacity={opacity} paragraphText={paragraphText} />
+        <HeaderStory opacity={opacity} />
         {pictures.map((item) => (
           <Image
             key={item.id}
@@ -134,11 +131,7 @@ const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
             changePargraphText={changePargraphText}
           />
         ))}
-        <HeaderStory
-          opacity={-opacity}
-          left={"110%"}
-          paragraphText={paragraphText}
-        />
+        <HeaderStory opacity={-opacity} left={"110%"} />
       </div>
       <p className={styles.storyParagraph}>{text}</p>
       <Arrow
