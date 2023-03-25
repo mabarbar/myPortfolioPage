@@ -16,7 +16,9 @@ const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
   const [percentage, setPercentage] = useState("");
   const [mouseDownAt, setMouseDownAt] = useState("0");
   const [prevPercentage, setPrevPercentage] = useState("0");
-  const [text, setText] = useState("Nowonarodzony");
+  const [text, setText] = useState(
+    "Klikaj na zdjęcia, żeby mnie poznać bliżej! ;)"
+  );
 
   const animateSlider = (e) => {
     if (mouseDownAt === "0") return;
@@ -76,27 +78,31 @@ const StoryPage = ({ executeScroll, goToSectionRef, goToPrevSectionRef }) => {
     switch (`${id}`) {
       case "1":
         setText(
-          "Od kiedy odrosłem od ziemii, ciągnęło mnie do komputerów. Jak byłem mały, miałem ogromne szczęście mając młodych rodziców, którzy grali w gry. Dzięki temu mogłem obserwować jak zagrywali się w klasyki takie jak Heroesy, czy Warcraft :)"
+          "Od małego, ciągnęło mnie do komputerów. Miałem ogromne szczęście mając młodych rodziców, którzy grali w gry. Dzięki temu mogłem obserwować jak zagrywali się w klasyki takie jak Heroesy, czy Warcraft :)"
         );
         break;
       case "2":
         setText(
-          "Zmieniający się tekst po kliknięciu w obrazek: Podstawówka balti"
+          "W roku 2019 przyszedł czas na wybór kierunku studiów. Po długich rozmyślaniach padło na architekturę, gdzie nauczyłem się wielu zagadnień, które jak po pewnym czasie stwierdziłem idealnie wpasowują się w wachlarz umiejętności Front-End Developera."
         );
         break;
       case "3":
-        setText("Zmieniający się tekst po kliknięciu w obrazek: Liceum");
+        setText(
+          "Programowania i Front-endu zacząłem się uczyć w czasach pandemii. Ze względu na ówczesne realia miałem mnóstwo czasu na naukę nowych zagadnień i właśnie wtedy stwierdziłem, że chcę się zajmować programowaniem."
+        );
         break;
       case "4":
         setText(
-          "Zmieniający się tekst po kliknięciu w obrazek: Rok temu pierwsze kroki w frontendzie"
+          "W roku 2021 postanowiłem się zapisać na studia informatyczne, żeby rozszerzyć swoje horyzonty poza Front-end. Dlaczego? Lubię mieć szeroką wiedzę z dziedziny, z którą mam do czynienia na codzień :)"
         );
         break;
       case "5":
-        setText("Zmieniający się tekst po kliknięciu w obrazek: Teraz");
+        setText(
+          "W lutym 2023 skończyłem Architekturę, a obecnie szukam stażu, lub pracy żeby rozpocząć swoją komercyjną przygodę w IT. Jestem szczęśliwy, ze względu na perspektywę, że będę robił to co naprawdę lubię."
+        );
         break;
       default:
-        setText("Zmieniający się tekst po kliknięciu w obrazek: Nowonarodzony");
+        setText("defualt text");
         break;
     }
   };

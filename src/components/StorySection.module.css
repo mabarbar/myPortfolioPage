@@ -6,15 +6,6 @@ section.storyPageSection {
   background-color: hsl(248, 67%, 51%);
 }
 
-.headerTrack {
-  position: absolute;
-  left: -50%;
-  color: white;
-  width: 600px;
-  height: 600px;
-  z-index: 1;
-}
-
 #imageTrack {
   display: flex;
   gap: 4vmin;
@@ -29,10 +20,9 @@ p.storyParagraph {
   justify-content: center;
   align-items: flex-end;
   position: absolute;
-  top: 180%;
+  top: 175%;
   width: 80vmin;
   text-align: center;
   color: #f8eddc;
   font-size: 1.2rem;
-  transition: 1s ease-in-out;
 }

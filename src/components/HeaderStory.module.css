@@ -8,7 +8,8 @@
 }
 
 .headerTrack > h2 {
-  font-size: 7rem;
+  font-size: 6rem;
+  line-height: 7rem;
   text-shadow: 10px 5px hsl(209, 43%, 53%);
   animation-duration: 3s;
   /* animation-iteration-count: infinite; */
@@ -16,7 +17,6 @@
 }
 
 .headerTrack > h2:hover {
-  font-size: 7rem;
   text-shadow: 10px 5px hsl(209, 43%, 53%);
   animation-duration: .7s;
   animation-iteration-count: infinite;
@@ -29,5 +29,12 @@
 
 .headerTrack > p {
   height: 20vmin;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+
+.headerTrack > p:hover {
+  animation-duration: .7s;
+  animation-iteration-count: infinite;
+  animation-name: one;
 }

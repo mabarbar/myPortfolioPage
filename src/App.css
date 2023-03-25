@@ -29,7 +29,7 @@ section {
   outline: 1px solid #ccc;
   border-radius: 2rem;
   z-index: 100;
-  transition: 0.1s;
+  transition: 0.2s;
 }
 
 .cursorChild {
